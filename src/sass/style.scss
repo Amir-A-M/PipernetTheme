@@ -1,0 +1,56 @@
+@import 'variables', 'fonts';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: #84a5b9a8;
+}
+
+.mh-100vh {
+    min-height: 100vh;
+}
+
+.ltr {
+    direction: ltr
+}
+
+.font-en {
+    font-family: var(--font-family-en);
+}
+
+
+// cursor
+.page-cursor {
+    position: fixed;
+    z-index: 99999999;
+    pointer-events: none;
+
+    width: .9rem;
+    height: .9rem;
+    transform: translate(-50%, -40%);
+
+    border-radius: 50%;
+
+    background-color: #84a5b9;
+    opacity: .5;
+
+    transition: ease-in-out .2s;
+    transition-property: transform, opacity;
+}
+
+
+
+@import 'header', 'hero-section', 'code-editor', 'work-section', 'contact-form', 'footer';

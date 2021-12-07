@@ -1,0 +1,116 @@
+.skills {
+    position: sticky;
+    top: 20vh;
+
+    ul {
+        padding: 0;
+
+        h6 {
+            font-size: 1.1rem;
+            margin-bottom: .7rem;
+        }
+
+        li {
+            padding: .7rem 3.2rem;
+            display: inline-block;
+
+            opacity: .8;
+
+            &::before {
+                content: '';
+                width: .3rem;
+                height: .3rem;
+                background-color: rgba(var(--s-color-rgb), 1);
+                border-radius: 50%;
+                display: inline-block;
+                margin-left: .8rem;
+            }
+        }
+    }
+
+    .other .more {
+        font-size: 1.3rem;
+    }
+}
+
+.work-card-added {
+    display: none;
+}
+
+.card.work {
+    .img {
+        width: 100%;
+        max-height: 17rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+
+    }
+
+    .title {
+        letter-spacing: .5px;
+    }
+
+    a {
+        color: rgb(58, 129, 167);
+
+        transition: color ease .1s;
+
+        text-decoration: blink underline rgb(58, 129, 167);
+
+        &:hover,
+        &:active {
+            color: rgb(58, 129, 167);
+        }
+    }
+
+    .text,
+    .tools,
+    .tools .badge {
+        color: rgba(var(--text-color-rgb), .9);
+        font-weight: 300;
+    }
+    .tools .badge {
+        font-weight: 500;
+        letter-spacing: .5px;
+    }
+
+    .tools {
+        .title {
+            margin-left: .2rem;
+        }
+
+        .badge {
+            background-color: rgba(var(--text-color-rgb), .03);
+            padding: .4rem .5rem;
+        }
+    }
+}
+
+.btn-load-more {
+    color: var(--bg-color);
+    background-color: rgba(var(--s-color-rgb), 1);
+    box-shadow: .1rem .1rem .5rem rgba(var(--s-color-rgb), .4);
+
+    transition: all ease-in-out .15s;
+
+    &:hover {
+        color: var(--bg-color);
+
+        transform: scale(.95);
+        box-shadow: .1rem .1rem 1rem rgba(var(--s-color-rgb), .4);
+
+    }
+}
+
+html[data-theme='dark'] {
+    .card.work a {
+        color: rgb(89, 190, 245);
+
+        transition: color ease .1s;
+
+
+    }
+}

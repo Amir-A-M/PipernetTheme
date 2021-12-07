@@ -1,0 +1,115 @@
+.hero-img {
+    width: 80vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+    user-select: none;
+}
+
+.content-part {
+    position: relative;
+    height: 100vh;
+
+    z-index: 1;
+
+    @media #{$media-md} {
+        padding-left: 2rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -15rem;
+        top: 0;
+        bottom: -1rem;
+        width: 37rem;
+        background-color: var(--bg-color);
+        clip-path: polygon(33% 0, 100% 0, 100% 100%, 9% 100%);
+    }
+
+    * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .title {
+        @media #{$media-sm} {
+            text-align: center;
+        }
+
+        h3 {
+            line-height: 1.6;
+            font-size: 1.3rem;
+            overflow: hidden;
+            padding: .2rem;
+            display: inline-block;
+
+            .moved {
+                display: block;
+                transform: translateY(110%);
+            }
+
+            @media #{$media-md} {
+                line-height: 1;
+            }
+
+        }
+    }
+
+    .text {
+        font-weight: 300;
+        line-height: 1.9;
+
+        @media #{$media-sm} {
+            text-align: justify;
+        }
+    }
+
+    .btn-outline {
+        color: var(--text-color);
+        border: 2px solid rgba(var(--text-color-rgb), .7);
+
+        &:hover,
+        &:active {
+            color: var(--bg-color) !important;
+            background-color: var(--text-color);
+        }
+
+        &:hover *,
+        &:active * {
+            color: var(--bg-color) !important;
+        }
+    }
+
+    .btn.btn-arrow {
+        color: var(--text-color);
+        border: none;
+
+        .arrow {
+            transition: all ease .2s;
+        }
+
+        &:hover .arrow {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+    }
+
+    .btn {
+        box-shadow: none !important;
+        outline: none !important;
+
+        font-size: .95rem;
+        font-weight: 300;
+    }
+
+    .img-man {
+        opacity: 1;
+        position: absolute;
+        left: -9vw;
+        height: 16rem;
+        width: auto;
+        bottom: -2rem;
+    }
+}

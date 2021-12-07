@@ -1,0 +1,52 @@
+[{
+        "title": "بازی دوز (tic tac toe)",
+        "href": "https://codepen.io/mr_mousavi/pen/NWjpRqm",
+        "imgSrc": "assets/images/TicTacToeGame.jpg",
+        "imgSmallSrc": "assets/images/TicTacToeGame-small.jpg",
+        "description": "بازی دوز با الگوریتم هرس آلفا بتا و حالت بازی دو نفره که با جاوا اسکریپت خالص نوشته شده است. سورس این بازی دوست داشتنی در <a href='https://github.com/mrmousavi80' target='_blank'>گیت هاب من</a> قابل مشاهده است.",
+        "tools": [
+            "js"
+        ]
+    },
+    {
+        "title": "پلاگین اسلایدر",
+        "href": "https://codepen.io/mr_mousavi/pen/BaRWLrX",
+        "imgSrc": "assets/images/carousel.jpg",
+        "imgSmallSrc": "assets/images/carousel-small.jpg",
+        "description": "پلاگین اسلایدر ساخته شده با jquery و قابلیت استفاده از Easing ها",
+        "tools": [
+            "js",
+            "jquery",
+            "jquery ui"
+        ]
+    },
+    {
+        "title": "قالب Analysis",
+        "href": "http://analysis.pipernet.ir/",
+        "imgSrc": "assets/images/AnalysisHomePage.jpg",
+        "imgSmallSrc": "assets/images/AnalysisHomePage-small.jpg",
+        "description": "قالب شرکتی Analysis شامل پنج صفحه کامل که با الهام و کپی از طرح های زیبا خلق شده است.",
+        "tools": [
+            "js",
+            "jquery",
+            "bootstrap",
+            "popper",
+            "fount awesome"
+        ]
+    },
+    {
+        "title": "قالب Homy",
+        "href": "http://homy.pipernet.ir/",
+        "imgSrc": "assets/images/Homy.jpg",
+        "imgSmallSrc": "assets/images/Homy-small.jpg",
+        "description": "اولین قالب من که از طرح Untree.co ساخته شد.",
+        "tools": [
+            "jquery",
+            "bootstrap",
+            "aos",
+            "flaticon",
+            "flickity carousel",
+            "slick carousel"
+        ]
+    }
+]

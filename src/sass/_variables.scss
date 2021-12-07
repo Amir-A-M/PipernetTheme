@@ -1,0 +1,81 @@
+// colors and theme mode
+html {
+    --p-color: #383C61;
+    --s-color: #84A6B9;
+    --text-color: #292929;
+    --bg-color: #f4f9fa;
+    --p-color-rgb: 56, 60, 97;
+    --s-color-rgb: 132, 166, 185;
+    --text-color-rgb: 44, 46, 55;
+    --bg-color-rgb: 244, 249, 250;
+}
+
+html[data-theme='dark'] {
+    --text-color: #f1f8f9;
+    --bg-color: #353535;
+    --text-color-rgb: 244, 249, 250;
+    --bg-color-rgb: 44, 46, 55;
+}
+
+// fonts
+html {
+    --font-family-en: 'Nunito', sans-serif;
+    --font-family-fa: IRANSans, sans-serif;
+
+    .dir {
+        direction: rtl;
+    }
+}
+
+
+html {
+    --font-family: var(--font-family-fa);
+}
+
+html[lang='en'] {
+    --font-family: var(--font-family-en);
+
+    .dir {
+        direction: ltr;
+    }
+}
+
+// responsive
+$media-md: "only screen and (max-width : 768px)";
+$media-sm: "only screen and (max-width : 576px)";
+
+
+.p-color {
+    color: var(--p-color);
+}
+
+.s-color {
+    color: var(--s-color);
+}
+
+.text-color {
+    color: var(--text-color);
+}
+
+.bg-color {
+    color: var(--bg-color);
+}
+
+.p-bg-color {
+    background-color: var(--p-color);
+
+}
+
+.s-bg-color {
+    background-color: var(--s-color);
+
+}
+
+.text-bg-color {
+    background-color: var(--text-color);
+
+}
+
+.bg-bg-color {
+    background-color: var(--bg-color);
+}
