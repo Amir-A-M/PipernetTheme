@@ -1,4 +1,6 @@
 # Pipernet
 Pipernet Theme
 
-> :warning: **To run without error. Run on Live Server.**
+> :warning: **To avoid errors:** Run on Live Server.
+
+> **install packages** : `npm install`
