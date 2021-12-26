@@ -3,9 +3,9 @@ const
   imagemin = require('gulp-imagemin'),
   uglify = require('gulp-uglify'),
   minifyHtml = require('gulp-minify-html'),
+  uglifycss = require('gulp-uglifycss'),
   sass = require('gulp-sass'),
   concat = require('gulp-concat'),
-  uglifyCss = require('gulp-uglifycss'),
   concatCss = require('gulp-concat-css'),
   browserSync = require("browser-sync").create();
 
@@ -68,7 +68,6 @@ gulp.task('php', function (done) {
 // copy HTML
 gulp.task('html', function (done) {
   gulp.src('src/*.html')
-    // .pipe(minifyHtml())
     .pipe(gulp.dest('dist'));
   done();
 });
@@ -86,7 +85,6 @@ gulp.task('sass', async function (done) {
   gulp.src('src/sass/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss('style.min.css'))
-    .pipe(uglifyCss())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
   done();
@@ -96,7 +94,6 @@ gulp.task('sass', async function (done) {
 gulp.task('js', async function (done) {
   gulp.src('src/js/*.js')
     .pipe(concat('app.min.js'))
-    // .pipe(uglify())
     .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.stream());
   done();
@@ -136,3 +133,26 @@ gulp.task('watch', gulp.parallel('browser-sync', async function (done) {
   gulp.watch('src/*.html', browserSync.reload);
   done();
 }));
+
+// minifying all codes
+gulp.task('build', async function (done) {
+  console.log('... js');
+  gulp.src('src/js/*.js')
+    .pipe(concat('app.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'));
+
+  console.log('... scss');
+  gulp.src('src/sass/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(concatCss('style.min.css'))
+    .pipe(uglifycss())
+    .pipe(gulp.dest('dist/css'));
+
+  console.log('... html');
+  gulp.src('src/*.html')
+    .pipe(minifyHtml())
+    .pipe(gulp.dest('dist'));
+
+  done();
+});
