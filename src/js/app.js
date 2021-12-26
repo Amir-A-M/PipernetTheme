@@ -405,8 +405,8 @@ heroTitle();
                                 <div class="img mb-4">
                                     <a href="${post.href}" target="_blank">
                                         <picture>
-                                          <source media="(min-width:720px)" srcset="${window.location.href}${post.imgSrc}">
-                                          <img src="${window.location.href}${imgSmall}" alt="${post.title}">
+                                          <source media="(min-width:720px)" srcset="${post.imgSrc}">
+                                          <img src="${imgSmall}" alt="${post.title}">
                                         </picture>
                                     </a>
                                 </div>
